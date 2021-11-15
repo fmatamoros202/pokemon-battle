@@ -1,0 +1,328 @@
+@font-face {
+  font-family: PokemonGB;
+  src: url(../../assets/fonts/PokemonGb-RAeo.ttf);
+  src: url(../../assets/fonts/PokemonGb-RAeo.ttf);
+}
+html {
+  scroll-behavior: smooth;
+  font-family: PokemonGB;
+  height: 90%;
+  background-image: url(../assets//battle-pads.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: 5%;
+  font-size: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .title {
+    font-size: 6rem;
+  }
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 10rem;
+  align-self: flex-start;
+}
+@media screen and (min-width: 1280px) {
+  .stats {
+    justify-content: space-between;
+    max-height: 12rem;
+    flex-direction: row;
+  }
+}
+
+.health-card {
+  width: 80%;
+  height: 60%;
+  background-color: khaki;
+  border-radius: 1.5rem;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
+  border: 6px solid black;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 1280px) {
+  .health-card {
+    margin-bottom: 0rem;
+    width: 40%;
+    height: 100%;
+  }
+}
+.health-card--left {
+  margin-left: 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .health-card--left {
+    margin-left: 3rem;
+  }
+}
+.health-card--right {
+  align-self: flex-end;
+  margin-right: 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .health-card--right {
+    align-self: flex-start;
+    margin-right: 3rem;
+  }
+}
+.health-card__name {
+  font-size: 1rem;
+  margin: 1rem 1rem 0 1rem;
+}
+.health-card__level {
+  font-size: 1rem;
+  margin: 1rem 1rem 0 1rem;
+}
+.health-card__bar-section {
+  width: 100%;
+  display: flex;
+  background: black;
+  height: 2rem;
+  margin: 0.25rem;
+  border-radius: 10rem;
+}
+.health-card__bar-text {
+  line-height: 0.5rem;
+  vertical-align: middle;
+  font-size: 1rem;
+  margin-left: 2rem;
+  color: orange;
+  font-weight: bold;
+  vertical-align: center;
+}
+.health-card__bar {
+  background: black;
+  width: 100%;
+  height: 1rem;
+  margin-top: 0.25rem;
+  border-radius: 3rem;
+  border: 4px solid white;
+}
+.health-card__bar-life {
+  border-radius: 3rem;
+  height: 100%;
+  width: 100%;
+  background: green;
+}
+.health-card__bar-life--hit {
+  width: 60%;
+}
+.health-card__bar-life--defeated {
+  width: 5%;
+  background-color: red;
+}
+
+.defeated {
+  color: red;
+}
+
+.pokemon-section {
+  width: 100%;
+  height: 40rem;
+  margin-top: 25%;
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (min-width: 768px) {
+  .pokemon-section {
+    margin-top: 10%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .pokemon-section {
+    font-size: 6rem;
+    margin-top: 5%;
+  }
+}
+
+.pokemon-player1 {
+  height: 100%;
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.pokemon-player2 {
+  height: 100%;
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.bounce-2 {
+  -webkit-animation-name: bounce-2;
+          animation-name: bounce-2;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes bounce-2 {
+  0% {
+    transform: translateY(-25px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes bounce-2 {
+  0% {
+    transform: translateY(-25px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-25px);
+  }
+}
+.fight-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .fight-section {
+    margin-bottom: 3rem;
+  }
+}
+.fight-section__button {
+  background-color: gray;
+  width: 30%;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+@media screen and (min-width: 768px) {
+  .fight-section__button {
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+}
+.fight-section__button--fight1 {
+  color: white;
+  background: red;
+}
+.fight-section__button--fight1:active {
+  color: red;
+  background: white;
+  border: 2px solid red;
+}
+.fight-section__button--fight2 {
+  color: white;
+  background: red;
+}
+.fight-section__button--fight2:active {
+  color: red;
+  background: white;
+  border: 2px solid red;
+}
+
+.action-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .action-section {
+    margin-bottom: 3rem;
+  }
+}
+.action-section__button {
+  background-color: gray;
+  width: 30%;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+@media screen and (min-width: 768px) {
+  .action-section__button {
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+}
+.action-section__button--back {
+  text-decoration: none;
+  color: white;
+  background: silver;
+}
+.action-section__button--back:active {
+  color: silver;
+  background: white;
+  border: 2px solid silver;
+}
+.action-section__button--reset {
+  text-decoration: none;
+  color: white;
+  background: teal;
+}
+.action-section__button--reset:active {
+  color: teal;
+  background: white;
+  border: 2px solid teal;
+}/*# sourceMappingURL=battle.css.map */
